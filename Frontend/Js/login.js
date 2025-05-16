@@ -6,10 +6,12 @@ body.onload = function(){
     body.className = "on-load";
 }
 
-signInButton.addEventListener("click", function(){
-    body.className = "sign-in";
-})
+signUpBtn.addEventListener('click', () => {
+    container.classList.add('sign-up');
+    container.classList.remove('signIn');
+});
 
-signUpButton.addEventListener("click", function(){
-    body.className = "sign-up";
-})
+signInBtn.addEventListener('click', () => {
+    container.classList.add('sign-in');
+    container.classList.remove('sign-up');
+});
