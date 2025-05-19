@@ -39,7 +39,7 @@ body{
     position: absolute;
     width: 40%;
     height: 100%;
-    background-color: #58af9b;
+    background-color: #002dc2;
 }
 
 .first-content{
@@ -181,7 +181,7 @@ body{
 
 .button-primary:hover{
     background-color: #ffffff;
-    color: #58af9b;
+    color: #002dc2;
 }
 
 .button-second{
