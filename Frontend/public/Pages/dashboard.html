@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dashboard - FleetPlus</title>
+        <link rel="stylesheet" href="../Css/dashboard.css">
+    </head>
+
+    <body>
+        <div class="dashboard-container">
+            <h2>Seja bem-vindo(a)!</h2>
+            <p id="saudacao"></p>
+            <button class="button-logout" onclick="logout()">Sair</button>
+            </div>
+        </div>
+        <script>
+            console.log("Email salvo:", localStorage.getItem("email"));
+            console.log("Token expiracao salvo:", localStorage.getItem("tokenExpiracao"));
+
+        </script>
+        <script src="../Js/dashboard.js"></script>
+    </body>
+</html>

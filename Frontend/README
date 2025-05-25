@@ -1,0 +1,23 @@
+# Login + Dashboard App (Node.js + HTML/CSS/JS)
+
+Este projeto é um sistema de login simples com dashboard, usando Node.js para servir arquivos HTML/CSS/JS de forma estática. A autenticação é realizada via API externa.
+
+---
+
+## Como rodar o projeto
+
+1. Instale as dependências:
+
+```bash
+npm install express
+npm install --save-dev nodemon
+npm install cors
+npm run dev
+```
+
+2. Adicione ao package.json
+
+"scripts": {
+  "start": "node app.js",
+  "dev": "nodemon app.js"
+}
