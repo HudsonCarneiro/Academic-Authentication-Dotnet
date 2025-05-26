@@ -6,26 +6,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Captura os valores dos inputs
         const inputs = document.querySelectorAll('.first-content .form input');
-        const [nameInput, emailInput, passwordInput] = inputs;
+        const [emailInput, passwordInput, passowordConfirmedInput] = inputs;
 
-        const name = nameInput.value.trim();
         const email = emailInput.value.trim();
-        const password = passwordInput.value.trim();
+        const senha = passwordInput.value.trim();
+        const senhaConfirmada  = passowordConfirmedInput.value.trim();
 
         // Validação básica
-        if (!name || !email || !password) {
+        if (!email || !senha|| !senhaConfirmada) {
             alert('Preencha todos os campos para se cadastrar.');
             return;
         }
 
         const userData = {
-            name,
             email,
-            password
+            senha,
+            senhaConfirmada
         };
 
         try {
-            const response = await fetch('https://umfgcloud-autenticacao-service-7e27ead80532.herokuapp.com/Autenticacao/autenticar', {
+            const response = await fetch('https://umfgcloud-autenticacao-service-7e27ead80532.herokuapp.com/Autenticacao/registar', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (response.ok) {
                 alert('Cadastro realizado com sucesso!');
-                // Redireciona ou limpa o formulário
+                window.location.href = "../index.html";
             } else {
                 alert(result.message || 'Erro ao cadastrar. Verifique os dados e tente novamente.');
             }
