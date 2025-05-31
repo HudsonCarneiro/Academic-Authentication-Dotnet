@@ -36,9 +36,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const email = emailInput.value.trim();
         const senha = passwordInput.value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!email || !senha) {
             alert("Preencha todos os campos.");
+            return;
+        }
+        
+        if (!emailRegex.test(email)) {
+            alert('E-mail inválido!');
             return;
         }
 
